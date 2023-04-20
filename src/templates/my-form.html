@@ -1,0 +1,54 @@
+<!-- /templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Increasing Solar Energy in New Jersey</title>
+    </head>
+    <body>
+	    <h3 style="text-align:center;=">Increasing Solar Energy in New Jersey</h3>
+		<p style="text-align:center;=">This project will compare the amount of solar panels within the county or specified municipality to indicate whether an increase in the amount of solar panel installations result in a decrease of CO2 emissions</p>
+
+	    <h4 style="text-align:center;=">Choose a County</h4>
+        <form action="/county-handler" method="POST">
+            <div style="text-align:center;=">
+				<select name="county" id="county">
+					<option value="">County</option>
+					<option value="Mercer">Mercer</option>
+				</select>
+            </div>
+			<div style="text-align:center;=">
+                <input type="submit" value="Submit">
+			</div>
+        </form>
+
+	    <h4 style="text-align:center;=">OR</h4>
+
+	    <h4 style="text-align:center;=">Choose a Municipality</h4>
+        <form action="/municipality-handler" method="POST">
+            <div style="text-align:center;=">
+				<select name="municipality" id="municipality">
+					<option value="Municipality">Municipality</option>
+					<option value="Aberdeen township">Aberdeen Township</option>
+				</select>
+				<select name="mun_county" id="mun_county">
+					<option value="">County</option>
+					<option value="Monmouth">Monmouth</option>
+				</select>
+            </div>
+			<div style="text-align:center;=">
+                <input type="submit" value="Submit">
+			</div>
+        </form>
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+    </style>
+</html>
