@@ -20,11 +20,12 @@
         padding: 8px 8px;
         border: 1px solid black;
     }
+
     </style>
 
     <body>
-		<h3>2015</h3>
-        <table>
+		<h3 style="text-align:center;">2015</h3>
+        <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
                 <tr>
@@ -35,11 +36,35 @@
             </thead>
             <!-- nested for loops in jinja template -->
             <tbody>
+			{%for row in oldinstallations%}
                 <tr>
-                {%for row in row%}
-                    <td>{{row}}</td>
+                {%for col in row%}
+                    <td>{{col}}</td>
                 {%endfor%}
                 </tr>
+			{%endfor%}
+            </tbody>
+        </table>
+
+		<h3 style="text-align:center;">2020</h3>
+        <table style="margin-left:auto; margin-right:auto">
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in heads%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
+            <!-- nested for loops in jinja template -->
+           	<tbody>
+			{%for row in currentinstallations%}
+                <tr>
+                {%for col in row%}
+                    <td>{{col}}</td>
+                {%endfor%}
+                </tr>
+			{%endfor%}
             </tbody>
         </table>
     </body>

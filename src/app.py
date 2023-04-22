@@ -45,18 +45,18 @@ def form():
 # handle venue POST and serve result web page
 @app.route('/county-handler', methods=['POST'])
 def venue_handler():
-    rows = connect('SELECT venue_id, title FROM events WHERE venue_id = ' + request.form['venue_id'] + ';')
-    heads = ['venue_id', 'title']
-    return render_template('my-result.html', rows=rows, heads=heads)
+    oldinstallations = connect('CREATE VIEW old_installation AS SELECT Municipality, COUNT(*) AS Installations FROM installation WHERE Year_Installed <= \'2015-12-31\' AND County = \'' + request.form['county'] + '\'GROUP BY Municipality; SELECT old_installation.municipality, old_installation.Installations, emission.TOTAL_MTCO2e FROM emission JOIN old_installation ON emission.Municipality=old_installation.Municipality AND emission.County=\'' + request.form['county'] + '\' AND Year = 2015;')
+    currentinstallations = connect('CREATE VIEW old_installation AS SELECT Municipality, COUNT(*) AS Installations FROM installation WHERE County = \'' + request.form['county'] + '\'GROUP BY Municipality; SELECT old_installation.municipality, old_installation.Installations, emission.TOTAL_MTCO2e FROM emission JOIN old_installation ON emission.Municipality=old_installation.Municipality AND emission.County=\'' + request.form['county'] + '\' AND Year = 2020;')
+    heads = ['Municipality', 'Installations','Total MTCO2 Emission']
+    return render_template('my-county-result.html', oldinstallations=oldinstallations, currentinstallations=currentinstallations, heads=heads)
 
 # handle venue POST and serve result web page
 @app.route('/municipality-handler', methods=['POST'])
 def municipality_handler():
-	installations = connect('SELECT COUNT (*) AS num_installations FROM installation WHERE Year_Installed <= \'2015-12-31\' AND Municipality = \'' + request.form['municipality'] + '\' AND County = \'' + request.form['mun_county'] + '\';')
-	emission = connect('SELECT TOTAL_MTCO2e AS Total_CO2_2015 FROM emission WHERE Year = 2015 AND Municipality = \'' + request.form['municipality'] + '\' AND County = \'' + request.form['mun_county'] + '\';')
+	oldinstallations = connect('CREATE VIEW old_mun_installation AS SELECT Municipality, County, COUNT(*) AS Installations FROM installation WHERE Year_Installed <= \'2015-12-31\' AND Municipality = \'' + request.form['municipality'] + '\' AND County = \'' + request.form['mun_county'] + '\'GROUP BY Municipality, County; SELECT old_mun_installation.Installations, emission.TOTAL_MTCO2e FROM emission JOIN old_mun_installation ON emission.Municipality=old_mun_installation.Municipality AND emission.County=old_mun_installation.County AND Year = 2015;')
+	currentinstallations = connect('CREATE VIEW old_mun_installation AS SELECT Municipality, County, COUNT(*) AS Installations FROM installation WHERE Municipality = \'' + request.form['municipality'] + '\' AND County = \'' + request.form['mun_county'] + '\'GROUP BY Municipality, County; SELECT old_mun_installation.Installations, emission.TOTAL_MTCO2e FROM emission JOIN old_mun_installation ON emission.Municipality=old_mun_installation.Municipality AND emission.County=old_mun_installation.County AND Year = 2020;')
 	heads = ['Number of Installations', 'Total MTCO2 Emission']
-	row = [installations,emission]
-	return render_template('my-result.html', row=row, heads=heads)
+	return render_template('my-municipality-result.html', oldinstallations=oldinstallations, currentinstallations=currentinstallations, heads=heads)
 
 if __name__ == '__main__':
     app.run(debug = True)
