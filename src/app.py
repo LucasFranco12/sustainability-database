@@ -6,6 +6,7 @@ from flask import Flask, render_template, request
 # Connect to the PostgreSQL database server
 def connect(query):
     conn = None
+    rows = []
     try:
         # read connection parameters
         params = config()
