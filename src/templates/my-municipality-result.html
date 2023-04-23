@@ -45,6 +45,26 @@
 			{%endfor%}
             </tbody>
         </table>
+        <table style="margin-left:auto; margin-right:auto">
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in headres%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
+            <!-- nested for loops in jinja template -->
+            <tbody>
+			{%for row in oldresinstall%}
+                <tr>
+                {%for col in row%}
+                    <td>{{col}}</td>
+                {%endfor%}
+                </tr>
+			{%endfor%}
+            </tbody>
+        </table>
 
 		<h3 style="text-align:center;">2020</h3>
         <table style="margin-left:auto; margin-right:auto">
@@ -59,6 +79,26 @@
             <!-- nested for loops in jinja template -->
            	<tbody>
 			{%for row in currentinstallations%}
+                <tr>
+                {%for col in row%}
+                    <td>{{col}}</td>
+                {%endfor%}
+                </tr>
+			{%endfor%}
+            </tbody>
+        </table>
+        <table style="margin-left:auto; margin-right:auto">
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in headres%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
+            <!-- nested for loops in jinja template -->
+           	<tbody>
+			{%for row in curresinstall%}
                 <tr>
                 {%for col in row%}
                     <td>{{col}}</td>
