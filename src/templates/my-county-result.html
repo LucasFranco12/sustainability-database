@@ -58,66 +58,6 @@
 			{%endfor%}
             </tbody>
         </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headres%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-            <tbody>
-			{%for row in oldcresinstall%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headcom%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-            <tbody>
-			{%for row in oldccominstall%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headother%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-            <tbody>
-			{%for row in oldcotherinstall%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
 		</div>
 		<div class="column">
 		<h3 style="text-align:center;">2020</h3>
@@ -133,66 +73,6 @@
             <!-- nested for loops in jinja template -->
            	<tbody>
 			{%for row in currentinstallations%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headres%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-           	<tbody>
-			{%for row in currcresinstall%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headcom%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-            <tbody>
-			{%for row in currccominstall%}
-                <tr>
-                {%for col in row%}
-                    <td>{{col}}</td>
-                {%endfor%}
-                </tr>
-			{%endfor%}
-            </tbody>
-        </table>
-        <table>
-            <!-- column header for loop in jinja template -->
-            <thead>
-                <tr>
-                {%for head in headother%}
-                    <th>{{head}}</th>
-                {%endfor%}
-                </tr>
-            </thead>
-            <!-- nested for loops in jinja template -->
-            <tbody>
-			{%for row in currcotherinstall%}
                 <tr>
                 {%for col in row%}
                     <td>{{col}}</td>
