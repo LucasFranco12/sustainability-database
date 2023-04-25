@@ -16,7 +16,7 @@ flask run
 ## Screenshots
 To use: Decide wether you would like to see data from municipalities in a county or a specific municipality and hit the sumbit button.
 
-![maingui](https://user-images.githubusercontent.com/94714783/234125462-697da2e5-7721-4b03-94a1-741a2e3f6915.png)
-![countGUI](https://user-images.githubusercontent.com/94714783/234125474-48194a40-8e1b-4790-bc8a-8f88aae615c8.png)
-![muniGUI](https://user-images.githubusercontent.com/94714783/234125480-869137db-3ebf-458f-97af-19d0ed8e2981.png)
+![maingui](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.25.05%20PM.png)
+![countGUI](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.26.42%20PM.png)
+![muniGUI](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.26.20%20PM.png)
 
