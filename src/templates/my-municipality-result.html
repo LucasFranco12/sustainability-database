@@ -25,7 +25,26 @@
 
     <body>
 		<h3 style="text-align:center;">2015</h3>
-        <!--Display table of total old installations and total MTCO2 emissions-->
+		<table style="margin-left:auto; margin-right:auto">
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in headpop%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
+            <!-- nested for loops in jinja template -->
+            <tbody>
+			{%for row in oldpopulation%}
+                <tr>
+                {%for col in row%}
+                    <td>{{col}}</td>
+                {%endfor%}
+                </tr>
+			{%endfor%}
+            </tbody>
+        </table>
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -46,7 +65,6 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of residential old installations and residential MTCO2 emissions-->
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -67,7 +85,7 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of commercial old installations and commercial MTCO2 emissions-->
+
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -88,7 +106,7 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of other old installations and other MTCO2 emissions-->
+
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -109,8 +127,28 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of total current installations and total MTCO2 emissions-->
+
 		<h3 style="text-align:center;">2020</h3>
+		<table style="margin-left:auto; margin-right:auto">
+            <!-- column header for loop in jinja template -->
+            <thead>
+                <tr>
+                {%for head in headpop%}
+                    <th>{{head}}</th>
+                {%endfor%}
+                </tr>
+            </thead>
+            <!-- nested for loops in jinja template -->
+            <tbody>
+			{%for row in currentpopulation%}
+                <tr>
+                {%for col in row%}
+                    <td>{{col}}</td>
+                {%endfor%}
+                </tr>
+			{%endfor%}
+            </tbody>
+        </table>
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -131,7 +169,6 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of residential current installations and residential MTCO2 emissions-->
         <table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -152,7 +189,7 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of commercial current installations and commercial MTCO2 emissions-->
+
 		<table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
@@ -173,7 +210,7 @@
 			{%endfor%}
             </tbody>
         </table>
-        <!--Display table of commercial other installations and other MTCO2 emissions-->
+
 		<table style="margin-left:auto; margin-right:auto">
             <!-- column header for loop in jinja template -->
             <thead>
