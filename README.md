@@ -18,5 +18,5 @@ To use: Decide wether you would like to see data from municipalities in a county
 
 ![maingui](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.25.05%20PM.png)
 ![countGUI](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.26.42%20PM.png)
-![muniGUI](https://github.com/TCNJ-degoodj/cab-project-9/blob/main/images/Screen%20Shot%202023-04-24%20at%2010.26.20%20PM.png)
+![muniGUI](https://github.com/TCNJ-degoodj/cab-project-9/blob/12dbbc22abb29412df393afe9ab5323e4b902780/images/Screenshot%20at%202023-05-01%2018-16-37.png)
 
