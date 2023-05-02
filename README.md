@@ -1,5 +1,5 @@
 ## Usage
-To create and populate the database, make sure that all sql files and the format_table.sh file is located in the lion directory of your VM. Then in your terminal run the command:
+To create and populate the database, make sure that all sql files and the format_table.sh file within the database folder is located in the lion directory of your VM. Then in your terminal run the command:
 
 ```
 sh ./format_tables.sh
