@@ -39,7 +39,7 @@
 		<div class="column">
 		<h3 style="text-align:center;">2015</h3>
         <table>
-            <!-- column header for loop in jinja template -->
+            <!-- Display Column Headers -->
             <thead>
                 <tr>
                 {%for head in heads%}
@@ -47,7 +47,7 @@
                 {%endfor%}
                 </tr>
             </thead>
-            <!-- nested for loops in jinja template -->
+            <!-- Display all municipality data in county in 2015 -->
             <tbody>
 			{%for row in oldinstallations%}
                 <tr>
@@ -62,7 +62,7 @@
 		<div class="column">
 		<h3 style="text-align:center;">2020</h3>
         <table>
-            <!-- column header for loop in jinja template -->
+            <!-- Display column headers -->
             <thead>
                 <tr>
                 {%for head in heads%}
@@ -70,7 +70,7 @@
                 {%endfor%}
                 </tr>
             </thead>
-            <!-- nested for loops in jinja template -->
+            <!-- Display all municipality data in county in 2020 -->
            	<tbody>
 			{%for row in currentinstallations%}
                 <tr>
